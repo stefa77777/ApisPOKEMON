@@ -1,0 +1,103 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dc0a2d; 
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+}
+
+/* Estilo para el buscador (si agregaste input) */
+#campoBusqueda {
+  padding: 12px 20px;
+  width: 90%;
+  max-width: 400px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid flexible para las tarjetas */
+#pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 10px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Efecto hover sobre la tarjeta */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Número de ID (#001, #002...) */
+.card .id {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #888;
+}
+
+/* Imagen del Pokémon */
+.card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Nombre del Pokémon */
+.card p {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #2c3e50;
+}
+
+/* Mensaje de carga */
+#cargando {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 50px;
+}
